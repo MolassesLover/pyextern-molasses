@@ -1,4 +1,5 @@
 *.n
+pyvenv
 env
 .haxelib
 
