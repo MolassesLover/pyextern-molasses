@@ -19,7 +19,7 @@ readme = "README.md"
 license = {text = "MIT"}
 
 [project.scripts]
-pyextern = "pyextern:cli.main"
+pyextern = "pyextern:cli.pyextern_Main.main"
 
 [tool.pdm]
 distribution = false
