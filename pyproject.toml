@@ -1,0 +1,25 @@
+[project]
+name = "pyextern"
+version = "0.1.0"
+description = "Extern generator for the Haxe Python target."
+
+authors = [
+    {name = "andlyli"},
+    {name = "MatthijsKamstra"},
+    {name = "MolassesLover"},
+]
+
+dependencies = [
+    "docutils==0.18.1",
+    "numpy==1.26.4",
+]
+
+requires-python = "==3.12.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+[project.scripts]
+pyextern = "pyextern:cli.main"
+
+[tool.pdm]
+distribution = false
