@@ -1,7 +1,7 @@
 {
   description = "A very basic flake";
 
-  inputs = { nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable"; };
+  inputs = { nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable"; };
 
   outputs = { self, nixpkgs }:
     let
@@ -14,7 +14,7 @@
         let
           pkgs = (import nixpkgs { inherit system; });
           pyextern = pkgs.callPackage misc/nix/pyextern.nix { };
-        in rec {
+        in {
           inherit pyextern;
           default = pyextern;
           devShell = pkgs.mkShell { inputsFrom = [ pyextern ]; };
